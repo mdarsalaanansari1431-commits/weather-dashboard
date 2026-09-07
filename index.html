@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Weather Dashboard</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for a city..." autocomplete="off">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+                <button id="locationBtn" title="Use My Location"><i class="fas fa-map-marker-alt"></i></button>
+            </div>
+        </header>
+
+        <div class="weather-container">
+            <!-- Current Weather Section -->
+            <div class="current-weather">
+                <div id="currentWeather" class="weather-card">
+                    <div class="loading">Loading weather data...</div>
+                </div>
+            </div>
+
+            <!-- Forecast Section -->
+            <div class="forecast-section">
+                <h2>5-Day Forecast</h2>
+                <div id="forecast" class="forecast-grid">
+                    <div class="loading">Loading forecast...</div>
+                </div>
+            </div>
+
+            <!-- Additional Details -->
+            <div class="details-section">
+                <h2>Additional Details</h2>
+                <div id="details" class="details-grid">
+                    <div class="detail-card">
+                        <div class="detail-label">Humidity</div>
+                        <div id="humidity" class="detail-value">--</div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-label">Wind Speed</div>
+                        <div id="windSpeed" class="detail-value">--</div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-label">Pressure</div>
+                        <div id="pressure" class="detail-value">--</div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-label">Feels Like</div>
+                        <div id="feelsLike" class="detail-value">--</div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-label">Visibility</div>
+                        <div id="visibility" class="detail-value">--</div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-label">UV Index</div>
+                        <div id="uvIndex" class="detail-value">--</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Data provided by OpenWeatherMap API | Last updated: <span id="lastUpdate">--</span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
